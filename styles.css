@@ -1,0 +1,141 @@
+body {
+  overflow: hidden;
+}
+
+svg {
+  max-width: 1400px;
+  width: 100vw;
+  shape-rendering: crispEdges;
+  font-family: 'Open Sans';
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#graph {
+  display: flex;
+  justify-content: center;
+}
+
+#tooltip {
+  display: none;
+  position: absolute;
+  padding: 20px;
+  border: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  background-color: white;
+  text-align: center;
+  opacity: 0.95;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#tooltip p {
+  margin: 0;
+}
+
+.date {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.average, .variance {
+  font-size: 16px;
+}
+
+.temperature {
+  font-size: 18px;
+  font-weight: 600;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  margin-left: 3px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  height: 16px;
+  outline: none;
+  background: none;
+  appearance: none;
+  pointer-events: none;
+}
+
+.slider:nth-child(odd) {
+  top: -33px;
+}
+.slider:nth-child(even) {
+  top: -13px;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  pointer-events: auto;
+  width: 20px;
+  height: 20px;
+  background: rgb(0, 117, 255);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  pointer-events: auto;
+  width: 20px;
+  height: 20px;
+  background: rgb(0, 117, 255);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+#interval {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.slider-background {
+  margin-top: 15px;
+  width: min(70%, 970px);
+  height: 10px;
+  background-color: lightgray;
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+.slider-progress {
+  position: relative;
+  height: 10px;
+  background-color: #78c3ff;
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+#slider-min-text, #slider-max-text {
+  position: relative;
+  width: min(100%, 970px);
+  font-size: 13px;
+  margin: 0;
+}
+
+#slider-min-text {
+  top: -29px;
+  left: 0%;
+}
+
+#slider-max-text {
+  top: -45px;
+  left: 0%;
+  text-align: end;
+}
